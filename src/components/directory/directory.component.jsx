@@ -18,7 +18,7 @@ export default class Directory extends React.Component {
         },
         {
           title: 'jackets',
-          imgUrl: 'https:/i.ibb.co/px2tCc3/jackets.png',
+          imgUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
           id: 2,
           linkUrl: ''
         },
