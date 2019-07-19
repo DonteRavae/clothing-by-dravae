@@ -2,7 +2,7 @@ import React from 'react';
 
 import './inventory-item.styles.scss';
 
-const InventoryItem = ({ id, name, price, imageUrl }) => (
+const InventoryItem = ({ name, price, imageUrl }) => (
   <div className="inventory-item">
     <div 
       className="image"
