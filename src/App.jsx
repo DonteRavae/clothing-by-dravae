@@ -65,8 +65,8 @@ const mapStateToProps = ({ user }) => ({
 });
 
 //update USER in state/store
-const mapDispatchToProps = dispatch => ({
+const mapActionToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapActionToProps)(App);
