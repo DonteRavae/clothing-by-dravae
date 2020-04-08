@@ -10,8 +10,8 @@ const InventoryPreview = ({ title, items }) => (
     <div className="preview">
       {items
         .filter((item, idx) => idx < 4)
-        .map(({ id, ...otherItemProps }) => (
-          <InventoryItem key={id} { ...otherItemProps } />
+        .map((item) => (
+          <InventoryItem key={item.id} item={item} />
       ))}
     </div>
   </div>
