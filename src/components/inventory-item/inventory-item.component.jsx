@@ -26,11 +26,11 @@ const InventoryItem = ({ item, addItem }) => {
   </div>
 )};
 
-const mapActionToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });
 
 export default connect(
   null, 
-  mapActionToProps
+  mapDispatchToProps
 )(InventoryItem);
