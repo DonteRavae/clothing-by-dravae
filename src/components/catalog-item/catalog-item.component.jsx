@@ -5,20 +5,20 @@ import { connect } from 'react-redux';
 import CustomButton from '../custom-button/custom-button.component';
 import { addItem } from '../../redux/cart/cart.action';
 
-import './inventory-item.styles.scss';
+import './catalog-item.styles.scss';
 
-const InventoryItem = ({ item, addItem }) => {
+const CatalogItem = ({ item, addItem }) => {
   const { imageUrl, name, price } = item;
   
   return (
-  <div className="inventory-item">
+  <div className="catalog-item">
     <div 
       className="image"
       style={{
         backgroundImage: `url(${imageUrl})`
       }}
     />
-    <div className="inventory-footer">
+    <div className="catalog-footer">
       <span className="name">{ name }</span>
       <span className="price">{ price }</span>
     </div>
@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null, 
   mapDispatchToProps
-)(InventoryItem);
+)(CatalogItem);

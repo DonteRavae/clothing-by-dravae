@@ -1,28 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
-import SHOP_DATA from './shop.data';
+import CatalogOverview from '../../components/catalog-overview/catalog-overview.component';
+import CatalogSectionPage from '../catalog-section/catalog-section.component';
 
-import InventoryPreview from '../../components/inventory-preview/inventory-preview.component';
+const ShopPage = ({ match }) => (
+  <div className="shop-page">
+    <Route exact path={`${match.path}`} component={CatalogOverview} />
+    <Route path={`${match.path}/:catalogId`} component={CatalogSectionPage} />
+  </div>
+);
 
-export default class ShopPage extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      inventory: SHOP_DATA
-    }
-  }
-
-  render() {
-    const {inventory} = this.state;
-    return (
-      <div className="shop-page">
-        {
-          inventory.map(({id, ...otherInventoryProps}) => (
-            <InventoryPreview key={id} {...otherInventoryProps} />
-          ))
-        }
-      </div>
-    );
-  }
-}
+export default ShopPage;

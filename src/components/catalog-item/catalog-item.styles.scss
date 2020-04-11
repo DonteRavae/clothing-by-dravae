@@ -1,5 +1,5 @@
-.inventory-item {
-  width: 22%;
+.catalog-item {
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -33,7 +33,7 @@
     }
   }
 
-  .inventory-footer {
+  .catalog-footer {
     width: 100%;
     height: 5%;
     display: flex;

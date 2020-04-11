@@ -1,0 +1,19 @@
+.catalog-section {
+  display: flex;
+  flex-direction: column;
+  
+  .title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+  }
+
+  .section-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+    .catalog-item {
+      margin-bottom: 30px;
+    }
+  }
+}
