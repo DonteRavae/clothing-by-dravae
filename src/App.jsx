@@ -1,20 +1,24 @@
+//React
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+//Firebase
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-
+//Cached State
 import { createStructuredSelector } from 'reselect';
-
+//Components
 import Header from './components/header/header.component';
 import HomePage from './pages/homepage/hompage.component';
 import ShopPage from './pages/shop/shop.components';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-
+//Redux Actions
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
-
+//Styles
 import './App.css';
+
+
 
 class App extends React.Component {
   unsubscribeFromAuth = null
