@@ -9,10 +9,10 @@ export const selectCatalog = createSelector(
 
 export const selectCatalogForPreview = createSelector(
   [selectCatalog],
-  catalog => Object.keys(catalog).map(key => catalog[key])
+  catalog => catalog ? Object.keys(catalog).map(key => catalog[key]) : []
 )
 
 export const selectCatalogSection = catalogUrlParam => createSelector(
   [selectCatalog],
-  catalog => catalog[catalogUrlParam]
+  catalog => (catalog ? catalog[catalogUrlParam] : null)
 )
