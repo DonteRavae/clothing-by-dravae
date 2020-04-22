@@ -24,7 +24,7 @@ class ShopPage extends React.Component {
     const { updateCatalog } = this.props;
     const CatalogRef = firestore.collection('catalog');
     
-    this.unsubscribeFromSnapshot = CatalogRef.onSnapshot(async snapshot => {
+    this.unsubscribeFromSnapshot = CatalogRef.get().then(snapshot => {
       const catalogMap = convertCatalogSnapshotToMap(snapshot);
       updateCatalog(catalogMap);
       this.setState({ loading: false });
